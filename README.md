@@ -91,8 +91,10 @@ However, certain games do not work properly :
 | Super Neat Boy        | Leaf counter doesn't appear              |
 
 ## Issues
-- The program is singlethreaded, meaning rendering can slow the emulation down
-- Certain elements disappear when sprite wrapping is disabled (e.g. super neat boy leaf counter)
+- The program is singlethreaded, meaning rendering can slow the emulation down.
+- Certain elements disappear when sprite wrapping is disabled (e.g. super neat boy leaf counter).
+- main.cpp contains SDL2 rendering code, which should be placed in a seperate file.
+- Certain C functions should be replaced with equivalent C++ ones.
 
 ## Licencing
 I've licenced the emulator under the terms of the MIT Licence
