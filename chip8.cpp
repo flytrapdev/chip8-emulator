@@ -133,7 +133,11 @@ uint8_t Chip8::loadROM(std::string filename) {
 
     std::cout << "Loading ROM " << filename << std::endl;
 
+    #ifdef _WIN32
     int fd = open(filename.c_str(), O_RDONLY | O_BINARY);
+    #else
+    int fd = open(filename.c_str(), O_RDONLY);
+    #endif
 
     if(fd == -1) {
         std::cout << "Could not read file " << filename << std::endl;
