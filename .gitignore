@@ -36,6 +36,9 @@ ch8emu
 *.ch8
 *.xo8
 
+# Palette files
+*.pal
+
 # Game documentation
 *.txt
 *.png
