@@ -20,8 +20,9 @@ If you need to change certain settings, you can launch the emulator from a comma
 Where `[options]` can include :  
 `-k [azerty qwerty]` : Selects the keyboard layout.  
 `-m [auto chip8 schip xochip]` : Selects the machine type, which toggles specific emulation quirks.  
-`-c cycles` : Target emulated instructions per second.  
-`-p palette_file` : Hex palette file to use.
+`-c cycles` : Emulated instructions per frame.  
+`-p palette_file` : Hex palette file to use.  
+`-t cycles` : Enable headless testing mode.  
 
 ### Palette files
 You can use palette files with this emulator.
@@ -57,11 +58,20 @@ There are also certain keys you can use while the emulator is running :
 | P                 | Pause / resume emulation
 | O                 | Execute and display next instruction (step)
 
-## Quirks
-This emulator supports multiple CHIP-8 extensions, however they are not fully backwards-compatible with each other.  
-Certain programs will expect specific behaviors from certain instructions.
+### Headless testing mode
+This mode is intended to help with automated testing.  
+When it's enabled, the emulator will run for a set number of cycles before exiting and printing the screen output to the terminal.  
+The delay timer will also be decremented every cycle instead of every frame, to force fixed-framerate games to update.  
+You cannot automate key presses in headless mode at the moment.  
 
-At the moment, these "quirks" cannot be enabled or disabled individually.  
+To enable this mode, use the following command line option :  
+`-t cycles` where `cycles` is the number of cycles you want to run.
+
+## Quirks
+Multiple CHIP-8 extensions are supported, however they are not fully backwards-compatible with each other.  
+Certain programs will expect a specific behavior from certain instructions.
+
+At the moment, these behavior "quirks" cannot be enabled or disabled individually.  
 Each machine type toggles specific quirks which should correspond to the behavior of said machine.
 
 | Quirks                                  | CHIP-8  | SUPERCHIP | XO-CHIP |
@@ -87,7 +97,6 @@ However, certain games do not work properly :
 | Skyward               | Crashes after the title screen           |
 | An evening to die for | Glitched cursor on the map screen        |
 | Damn8ku               | Glitched player movement                 |
-| Piper                 | Wave never appears                       |
 | Super Neat Boy        | Leaf counter doesn't appear              |
 
 ## Issues
