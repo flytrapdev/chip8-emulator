@@ -472,41 +472,51 @@ void Chip8::emulateInstruction() {
 
         case 0x5000: {
 
-            if((opcode & 0x000F) == 0x0000) {
-                //0x5XY0
-                //Skip next instruction if VX == VY
-                if(v[(opcode & 0x0F00) >> 8] == v[(opcode & 0x00F0) >> 4])
-                    skipNextInstruction();
-            }
-            else if((opcode & 0x000F) == 0x0002) {
-                //0x5XY2
-                //(XO-CHIP) Save VX..VY to memory at location I
-                uint8_t x = ((opcode & 0x0F00) >> 8);
-                uint8_t y = ((opcode & 0x00F0) >> 4);
-
-                if(y >= x)
-                    memcpy(memory + I, v + x, 1 + y - x);
-                else {
-                    //Reverse
-                    for(uint8_t i = 0 ; i <= x - y ; i ++)
-                        memory[I + i] = v[x - i];
+            switch(opcode & 0x000F) {
+                
+                case 0x0000: {
+                    //0x5XY0
+                    //Skip next instruction if VX == VY
+                    if(v[(opcode & 0x0F00) >> 8] == v[(opcode & 0x00F0) >> 4])
+                        skipNextInstruction();
+                    break;
                 }
 
-            }
-            else if((opcode & 0x000F) == 0x0003) {
-                //0x5XY3
-                //(XO-CHIP) Load VX..VY from memory at location I
-                uint8_t x = ((opcode & 0x0F00) >> 8);
-                uint8_t y = ((opcode & 0x00F0) >> 4);
+                case 0x0002: {
+                    //0x5XY2
+                    //(XO-CHIP) Save VX..VY to memory at location I
+                    uint8_t x = ((opcode & 0x0F00) >> 8);
+                    uint8_t y = ((opcode & 0x00F0) >> 4);
 
-                if(y >= x)
-                    memcpy(v + x, memory + I, 1 + y - x);
-                else {
-                    //Reverse
-                    for(uint8_t i = 0 ; i <= x - y ; i ++)
-                        v[x - i] = memory[I + i];
+                    if(y >= x)
+                        memcpy(memory + I, v + x, 1 + y - x);
+                    else {
+                        //Reverse
+                        for(uint8_t i = 0 ; i <= x - y ; i ++)
+                            memory[I + i] = v[x - i];
+                    }
+
+                    break;
                 }
 
+                case 0x0003: {
+                    //0x5XY3
+                    //(XO-CHIP) Load VX..VY from memory at location I
+                    uint8_t x = ((opcode & 0x0F00) >> 8);
+                    uint8_t y = ((opcode & 0x00F0) >> 4);
+
+                    if(y >= x)
+                        memcpy(v + x, memory + I, 1 + y - x);
+                    else {
+                        //Reverse
+                        for(uint8_t i = 0 ; i <= x - y ; i ++)
+                            v[x - i] = memory[I + i];
+                    }
+
+                    break;
+                }
+
+                default : break;
             }
 
             break;
