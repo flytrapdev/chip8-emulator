@@ -92,6 +92,8 @@ int main(int argc, char** argv)
         cout << "  -k [azerty qwerty]    keyboard layout" << endl;
         cout << "  -m [auto chip8 schip xochip]    machine type" << endl;
         cout << "  -c cycles    instructions per frame" << endl;
+        cout << " testing : " << endl;
+        cout << "  -t cycles    run headless for n cycles and exit" << endl;
 
         return 0;
     }
@@ -332,11 +334,18 @@ int main(int argc, char** argv)
                     unsigned short i;
 
                     for(i = 0 ; i < 16 ; i++) {
-                        if(event.key.keysym.sym == keyBindings[i + 16*keySet])
+                        if(event.key.keysym.sym == keyBindings[i + 16*keySet]) {
                             chip8 -> keys[i] = true;
+                            break;
+                        }
                     }
 
                     switch(event.key.keysym.sym) {
+
+                        case SDLK_ESCAPE: {
+                            running = false;
+                            break;
+                        }
 
                         case SDLK_F2: {
                             chip8 -> initialize();
@@ -375,12 +384,14 @@ int main(int argc, char** argv)
                             break;
                         }
 
+                        case SDLK_UP:       chip8 -> keys[5] = true; break;
+                        case SDLK_LEFT:     chip8 -> keys[7] = true; break;
+                        case SDLK_DOWN:     chip8 -> keys[8] = true; break;
+                        case SDLK_RIGHT:    chip8 -> keys[9] = true; break;
+                        case SDLK_SPACE:    chip8 -> keys[6] = true; break;
 
                         default : break;
                     }
-
-                    if(event.key.keysym.sym == SDLK_ESCAPE)
-                        running = false;
 
                     break;
                 }
@@ -389,8 +400,20 @@ int main(int argc, char** argv)
                     unsigned short i;
 
                     for(i = 0 ; i < 16 ; i++) {
-                        if(event.key.keysym.sym == keyBindings[i + 16*keySet])
+                        if(event.key.keysym.sym == keyBindings[i + 16*keySet]) {
                             chip8->keys[i] = false;
+                            break;
+                        }                            
+                    }
+
+                    switch(event.key.keysym.sym) {
+                        case SDLK_UP:       chip8 -> keys[5] = false; break;
+                        case SDLK_LEFT:     chip8 -> keys[7] = false; break;
+                        case SDLK_DOWN:     chip8 -> keys[8] = false; break;
+                        case SDLK_RIGHT:    chip8 -> keys[9] = false; break;
+                        case SDLK_SPACE:    chip8 -> keys[6] = false; break;
+
+                        default : break;
                     }
 
                     break;
