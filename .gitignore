@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+ch8emu
+
+# Chip-8 ROMS
+*.ch8
+*.xo8
+
+# Game documentation
+*.txt
+*.png
+*.pdf
