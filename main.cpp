@@ -33,8 +33,8 @@ SOFTWARE.
 
 #include "chip8.hpp"
 
-#define CYCLES_STEP 50
-#define CYCLES_DEFAULT 600
+#define CYCLES_STEP 5
+#define CYCLES_DEFAULT 200
 
 #define ARG_CYCLES "-c"
 #define ARG_MACHINE "-m"
@@ -79,7 +79,7 @@ int main(int argc, char** argv)
     };
 
     //Emulation properties
-    int cycles = CYCLES_DEFAULT;  // CHIP-8 cycles per second
+    int cycles = CYCLES_DEFAULT;  // CHIP-8 cycles per frame
     uint8_t keySet = KB_DEFAULT;  // 0-QWERTY 1-AZERTY
     bool paused = false;          // Emulation paused
     int machine = MACHINE_DEFAULT;// 0: auto 1: chip8 2:schip 3:xochip
@@ -91,7 +91,7 @@ int main(int argc, char** argv)
         cout << " options :" << endl;
         cout << "  -k [azerty qwerty]    keyboard layout" << endl;
         cout << "  -m [auto chip8 schip xochip]    machine type" << endl;
-        cout << "  -c cycles    instructions per second" << endl;
+        cout << "  -c cycles    instructions per frame" << endl;
 
         return 0;
     }
@@ -206,7 +206,7 @@ int main(int argc, char** argv)
         case MACHINE_AUTO :
         case MACHINE_CHIP8 : {
             //CHIP-8
-            chip8->fxQuirk = false;
+            chip8->loadStoreQuirk = false;
             chip8->shiftQuirk = false;
             chip8->wrapQuirk = true;
             break;
@@ -214,18 +214,18 @@ int main(int argc, char** argv)
 
         case MACHINE_SCHIP : {
             //SCHIP
-            chip8->fxQuirk = true;
+            chip8->loadStoreQuirk = true;
             chip8->shiftQuirk = true;
-            chip8->hiresQuirk = false;
+            chip8->hiresClearQuirk = false;
             chip8->wrapQuirk = true;
             break;
         }
 
         case MACHINE_XOCHIP : {
             //XO-CHIP
-            chip8->fxQuirk = false;
+            chip8->loadStoreQuirk = false;
             chip8->shiftQuirk = false;
-            chip8->hiresQuirk = true;
+            chip8->hiresClearQuirk = true;
             chip8->wrapQuirk = false;
             break;
         }
@@ -279,7 +279,7 @@ int main(int argc, char** argv)
     char cyclesBuff[256];
     snprintf(cyclesBuff, 256, "%i", cycles);
 
-    string title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per second";
+    string title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
 
     cout << "Program started" << endl;
 
@@ -291,7 +291,7 @@ int main(int argc, char** argv)
     }
 
     SDL_Window* window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 512, SDL_WINDOW_OPENGL);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     SDL_Event event;
     SDL_Rect rect;
 
@@ -348,7 +348,7 @@ int main(int argc, char** argv)
                                 cycles -= CYCLES_STEP;
 
                             snprintf(cyclesBuff, 256, "%i", cycles);
-                            title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per second";
+                            title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
                             SDL_SetWindowTitle(window, title.c_str());
                             break;
                         }
@@ -357,7 +357,7 @@ int main(int argc, char** argv)
                             cycles += CYCLES_STEP;
 
                             snprintf(cyclesBuff, 256, "%i", cycles);
-                            title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per second";
+                            title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
                             SDL_SetWindowTitle(window, title.c_str());
                             break;
                         }
@@ -404,7 +404,7 @@ int main(int argc, char** argv)
         //Emulate cycles
         if(!paused and !chip8->stopped){
 
-            for(int i = 0 ; i < cycles / 60 ; i++)
+            for(int i = 0 ; i < cycles ; i++)
 				chip8 -> emulateInstruction();
 
         }
@@ -414,64 +414,62 @@ int main(int argc, char** argv)
 
 
         //Update display
-        if(chip8 -> drawFlag) {
 
-            //Clear surface
-            SDL_SetRenderDrawColor(renderer, chip8->palette[0][0], chip8->palette[0][1], chip8->palette[0][2], 255);
-            SDL_RenderClear(renderer);
+        //Clear surface
+        SDL_SetRenderDrawColor(renderer, chip8->palette[0][0], chip8->palette[0][1], chip8->palette[0][2], 255);
+        SDL_RenderClear(renderer);
 
-            //Color (XO-CHIP)
-            uint8_t col;
+        //Color (XO-CHIP)
+        uint8_t col;
 
-            //Memory location
-            uint16_t memLoc = 0;
+        //Memory location
+        uint16_t memLoc = 0;
 
-            //Draw pixels
-            for(uint8_t y = 0 ; y < SCHIP_H ; y++) {
+        //Draw pixels
+        for(uint8_t y = 0 ; y < SCHIP_H ; y++) {
 
-                for(uint8_t x = 0 ; x < SCHIP_W ; x++) {
+            for(uint8_t x = 0 ; x < SCHIP_W ; x++) {
 
-                    if(chip8->gfx[0][memLoc] != 0 || chip8->gfx[1][memLoc] != 0) {
+                if(chip8->gfx[0][memLoc] != 0 || chip8->gfx[1][memLoc] != 0) {
 
-                        //Use full palette on XOCHIP, only two colors on other machines
-                        if(machine == MACHINE_AUTO || machine == MACHINE_XOCHIP)
-                            col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc]);
-                        else
-                            col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc] > 0) ? 3 : 0;
+                    //Use full palette on XOCHIP, only two colors on other machines
+                    if(machine == MACHINE_AUTO || machine == MACHINE_XOCHIP)
+                        col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc]);
+                    else
+                        col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc] > 0) ? 3 : 0;
 
-                        SDL_SetRenderDrawColor(renderer, chip8->palette[col][0], chip8->palette[col][1], chip8->palette[col][2], 255);
+                    SDL_SetRenderDrawColor(renderer, chip8->palette[col][0], chip8->palette[col][1], chip8->palette[col][2], 255);
 
-                        rect.x = x * rect.w;
-                        rect.y = y * rect.h;
+                    rect.x = x * rect.w;
+                    rect.y = y * rect.h;
 
-                        SDL_RenderFillRect(renderer, &rect);
-                    }
-
-
-
-                    memLoc ++;
-
+                    SDL_RenderFillRect(renderer, &rect);
                 }
+
+
+
+                memLoc ++;
 
             }
 
-            //Update display
-            SDL_RenderPresent(renderer);
-
-            chip8 -> drawFlag = false;
         }
 
+        //Update display
+        SDL_RenderPresent(renderer);
 
-        //60fps delay
-        currentTime = SDL_GetTicks();
-
-        if(currentTime - lastTime < 1000/60) {
-            SDL_Delay(1000/60 - (currentTime - lastTime));
-        }
-
-        lastTime = currentTime;
-
+        chip8 -> drawFlag = false;
     }
+
+
+    //60fps delay
+    currentTime = SDL_GetTicks();
+
+    if(currentTime - lastTime < 1000/60) {
+        SDL_Delay(1000/60 - (currentTime - lastTime));
+    }
+
+    lastTime = currentTime;
+
 
     SDL_DestroyWindow(window);
     SDL_Quit();

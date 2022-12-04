@@ -41,10 +41,10 @@ Chip8::Chip8() {
     loaded = false;
 
     //CHIP extensions quirks
-    fxQuirk = false;    //FX55 FX65 SCHIP behavior
-    shiftQuirk = false; //SCHIP shift behavior
-    hiresQuirk = true;  //Clear screen when changing resolutions
-    wrapQuirk = false;  //Sprites do not wrap around by default
+    loadStoreQuirk = false;     //FX55 FX65 SCHIP behavior
+    shiftQuirk = false;         //SCHIP shift behavior
+    hiresClearQuirk = true;     //Clear screen when changing resolutions
+    wrapQuirk = false;          //Sprites do not wrap around by default
 
     //Default palette
     palette[0][0] = 0x00;
@@ -928,7 +928,7 @@ void Chip8::emulateInstruction() {
                     //Store V0..VX into memory at location I
                     memcpy(memory + I, v, x + 1);
 
-                    if(!fxQuirk)
+                    if(!loadStoreQuirk)
                         I += x + 1;
 
                     break;
@@ -939,7 +939,7 @@ void Chip8::emulateInstruction() {
                     //Store memory at location I into V0..VX
                     memcpy(v, memory + I, x + 1);
 
-                    if(!fxQuirk)
+                    if(!loadStoreQuirk)
                         I += x + 1;
 
                     break;

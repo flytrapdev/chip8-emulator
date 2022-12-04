@@ -89,10 +89,10 @@ public:
     uint8_t *fontSet;
 
     //CHIP extensions quirks
-    bool fxQuirk;    //FX55 FX65 behavior
-    bool shiftQuirk; //Shift instructions behavior
-    bool hiresQuirk; //Clear screen on resolution change (SCHIP and XOCHIP only)
-    bool wrapQuirk;  //Sprites wrap around screen boundariess
+    bool loadStoreQuirk;    //FX55 FX65 behavior
+    bool shiftQuirk;        //Shift instructions behavior
+    bool hiresClearQuirk;   //Clear screen on resolution change (SCHIP and XOCHIP only)
+    bool wrapQuirk;         //Sprites wrap around screen boundariess
 
     Chip8();
     void initialize();
