@@ -40,6 +40,7 @@ SOFTWARE.
 #define ARG_MACHINE "-m"
 #define ARG_KEYBOARD "-k"
 #define ARG_PALETTE "-p"
+#define ARG_TEST "-t"
 #define ARGLEN 2
 #define ARG_AUTO "auto"
 #define ARG_CHIP8 "chip8"
@@ -82,6 +83,7 @@ int main(int argc, char** argv)
     uint8_t keySet = KB_DEFAULT;  // 0-QWERTY 1-AZERTY
     bool paused = false;          // Emulation paused
     int machine = MACHINE_DEFAULT;// 0: auto 1: chip8 2:schip 3:xochip
+    int testCycles = 0;           // Run a set number of cycles for testing
 
     //Display argument help
     if(argc < 2) {
@@ -182,6 +184,20 @@ int main(int argc, char** argv)
                 return 1;
             }
         }
+
+        // Test mode
+        if(strncmp(ARG_TEST, argv[i], ARGLEN) == 0) {
+
+            if(argc <= i+1) {
+                cout << "ERROR : cycles value not provided" << endl;
+                return 1;
+            }
+
+            if(sscanf(argv[i+1], "%d", &testCycles) != 1) {
+                cout << "ERROR : cycles argument must be an integer number" << endl;
+                return 1;
+            }
+        }
     }
 
     switch(machine) {
@@ -223,6 +239,40 @@ int main(int argc, char** argv)
         running = true;
     } else {
         return 1;
+    }
+
+    // Headless testing mode
+    // Execute set number of cycles and exit
+    if (testCycles > 0) {
+
+        cout << "Emulating " << (int)testCycles << " cycles" << endl;
+
+        for (int i = 0 ; i < testCycles ; i++) {
+
+            chip8->emulateInstruction();
+
+            // Force timer update
+            chip8 -> updateTimers();
+        }
+
+        // Print video output to terminal
+        cout << endl << "Video output :" << endl;
+
+        for (int p = 0 ; p < 2 ; p++) {
+            cout << "Plane " << (int)p << endl;
+
+            for (int i = 0 ; i < SCHIP_H ; i++) {
+                for (int j = 0 ; j < SCHIP_W ; j++) {
+                    cout << ((chip8->gfx[p][j + i * SCHIP_W] > 0) ? "0" : ".");
+                }
+
+                cout << endl;
+            }
+
+        }
+
+        return 0;
+
     }
 
     //Window title
