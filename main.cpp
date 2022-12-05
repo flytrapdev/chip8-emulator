@@ -258,10 +258,10 @@ int main(int argc, char** argv)
         }
 
         // Print video output to terminal
-        cout << endl << "Video output :" << endl;
+        cout << endl << "RESULTS" << endl;
 
         for (int p = 0 ; p < 2 ; p++) {
-            cout << "Plane " << (int)p << endl;
+            cout << "Plane " << (int)p << " :" << endl;
 
             for (int i = 0 ; i < SCHIP_H ; i++) {
                 for (int j = 0 ; j < SCHIP_W ; j++) {
