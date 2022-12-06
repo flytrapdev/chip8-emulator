@@ -592,23 +592,18 @@ void Chip8::emulateInstruction() {
 
                 case 0x0006: {
                     //0x8XY6
-                    //Rotate VX right
-                    //Set VF = least significant bit of VX
-
-                    //Rotate VY right
+                    //Shift VY right, store result in VX
                     //Set VF = least significant bit of VY
 
-                    if(shiftQuirk) {
-                        uint8_t carry = v[x] & 0x01;
-                        v[x] >>= 1;
-                        v[0xF] = carry;
-                    }
-                    else {
-                        uint8_t carry = v[y] & 0x01;
-                        v[y] >>= 1;
-                        v[x] = v[y];
-                        v[0xF] = carry;
-                    }
+                    //(SCHIP) Shift VX right
+                    //Set VF = least significant bit of VX
+
+                    if(shiftQuirk)
+                        y = x;
+                    
+                    uint8_t carry = v[y] & 0x01;
+                    v[x] = v[y] >> 1;
+                    v[0xF] = carry;
 
                     break;
                 }
@@ -626,23 +621,18 @@ void Chip8::emulateInstruction() {
 
                 case 0x000E: {
                     //0x8XYE
-                    //Rotate VX left
-                    //Set VF = most significant bit of VX
-
-                    //Rotate VY left
+                    //Shift VY left, store result in VX
                     //Set VF = most significant bit of VY
 
-                    if(shiftQuirk) {
-                        uint8_t carry = v[x] >> 7;
-                        v[x] <<= 1;
-                        v[0xF] = carry;
-                    }
-                    else {
-                        uint8_t carry = v[x] >> 7;
-                        v[y] <<= 1;
-                        v[x] = v[y];
-                        v[0xF] = carry;
-                    }
+                    //(SCHIP) Shift VX left
+                    //Set VF = most significant bit of VX
+
+                    if(shiftQuirk)
+                        y = x;
+
+                    uint8_t carry = v[y] >> 7;
+                    v[x] = v[y] << 1;
+                    v[0xF] = carry;
 
                     break;
                 }

@@ -92,12 +92,9 @@ It passes the following test roms :
 However, certain games do not work properly :  
 | Games                 | Issues                                   |
 |:----------------------|:-----------------------------------------|
-| Cave explorer         | Glitched graphics, character cannot move |
-| Eaty the alien        | Crashes after the title screen           |
-| Skyward               | Crashes after the title screen           |
+| Skyward               | Player falls through the floor           |
 | An evening to die for | Glitched cursor on the map screen        |
-| Damn8ku               | Glitched player movement                 |
-| Super Neat Boy        | Leaf counter doesn't appear              |
+| Super Neat Boy        | Sprites wrap around the screen           |
 
 ## Issues
 - The program is singlethreaded, meaning rendering can slow the emulation down.
