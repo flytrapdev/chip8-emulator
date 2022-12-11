@@ -889,6 +889,12 @@ void Chip8::emulateInstruction() {
                     uint8_t carry = (I + v[x] > 0xFFF)? 1 : 0;
 
                     I += v[x];
+
+                    // SUPERCHIP sets VF to 1 when there is an overflow
+                    // XO-CHIP (OCTO) doesn't 
+                    // Spacefight 2091 requires this to be enabled
+                    // TODO : investigate this, make it a separate quirk
+                    if(shiftQuirk)
                     v[0xF] = carry;
 
                     break;
