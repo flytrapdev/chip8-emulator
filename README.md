@@ -92,7 +92,7 @@ It passes the following test roms :
 However, certain games do not work properly :  
 | Games                 | Issues                                                       |
 |:----------------------|:-------------------------------------------------------------|
-| Skyward               | Requires loadStoreQuirk to be enabled, glitches near the end |
+| Skyward               | Requires loadStoreQuirk to be enabled, glitches near the end<br> (Use "skyward" as machine type) |
 | Super Neat Boy        | Sprites wrap around the screen, otherwise no leaf counter    |
 
 ## Issues

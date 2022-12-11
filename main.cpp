@@ -46,6 +46,7 @@ SOFTWARE.
 #define ARG_CHIP8 "chip8"
 #define ARG_SCHIP "schip"
 #define ARG_XOCHIP "xochip"
+#define ARG_SKYWARD "skyward"
 #define ARG_QWERTY "qwerty"
 #define ARG_AZERTY "azerty"
 
@@ -53,6 +54,7 @@ SOFTWARE.
 #define MACHINE_CHIP8 1
 #define MACHINE_SCHIP 2
 #define MACHINE_XOCHIP 3
+#define MACHINE_SKYWARD 4
 
 #define KB_QWERTY 0
 #define KB_AZERTY 1
@@ -135,8 +137,8 @@ int main(int argc, char** argv)
 
         //Emulated machine
         if(strncmp(ARG_MACHINE, argv[i], ARGLEN) == 0) {
-            char *values[] = {(char*)ARG_AUTO, (char*)ARG_CHIP8, (char*)ARG_SCHIP, (char*)ARG_XOCHIP};
-            int machines[] = {MACHINE_AUTO, MACHINE_CHIP8, MACHINE_SCHIP, MACHINE_XOCHIP};
+            char *values[] = {(char*)ARG_AUTO, (char*)ARG_CHIP8, (char*)ARG_SCHIP, (char*)ARG_XOCHIP, (char*)ARG_SKYWARD};
+            int machines[] = {MACHINE_AUTO, MACHINE_CHIP8, MACHINE_SCHIP, MACHINE_XOCHIP, MACHINE_SKYWARD};
             bool machineFound = false;
 
             if(argc <= i+1) {
@@ -144,7 +146,7 @@ int main(int argc, char** argv)
                 return 1;
             }
 
-            for(int j = 0 ; j < 4 ; j++) {
+            for(int j = 0 ; j < sizeof(values) ; j++) {
                 if(strncmp(values[j], argv[i+1], strlen(values[j])) == 0) {
                     machine = machines[j];
                     machineFound = true;
@@ -233,6 +235,16 @@ int main(int argc, char** argv)
         case MACHINE_XOCHIP : {
             //XO-CHIP
             chip8->loadStoreQuirk = false;
+            chip8->shiftQuirk = false;
+            chip8->hiresClearQuirk = true;
+            chip8->wrapQuirk = false;
+            break;
+        }
+
+        case MACHINE_SKYWARD : {
+            //XO-CHIP with load quirk enabled
+            //Fixes Skyward
+            chip8->loadStoreQuirk = true;
             chip8->shiftQuirk = false;
             chip8->hiresClearQuirk = true;
             chip8->wrapQuirk = false;
@@ -455,7 +467,7 @@ int main(int argc, char** argv)
                 if(chip8->gfx[0][memLoc] != 0 || chip8->gfx[1][memLoc] != 0) {
 
                     //Use full palette on XOCHIP, only two colors on other machines
-                    if(machine == MACHINE_AUTO || machine == MACHINE_XOCHIP)
+                    if(machine != MACHINE_CHIP8 && machine != MACHINE_SCHIP)
                         col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc]);
                     else
                         col = ((chip8->gfx[1][memLoc] << 1) + chip8->gfx[0][memLoc] > 0) ? 3 : 0;
