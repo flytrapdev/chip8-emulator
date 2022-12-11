@@ -90,16 +90,15 @@ It passes the following test roms :
 - test_opcode by corax89 (all modes)
 
 However, certain games do not work properly :  
-| Games                 | Issues                                   |
-|:----------------------|:-----------------------------------------|
-| Skyward               | Player falls through the floor           |
-| An evening to die for | Glitched cursor on the map screen        |
-| Super Neat Boy        | Sprites wrap around the screen           |
+| Games                 | Issues                                                       |
+|:----------------------|:-------------------------------------------------------------|
+| Skyward               | Requires loadStoreQuirk to be enabled, glitches near the end |
+| Super Neat Boy        | Sprites wrap around the screen, otherwise no leaf counter    |
 
 ## Issues
 - The program is singlethreaded, meaning rendering can slow the emulation down.
 - Certain elements disappear when sprite wrapping is disabled (e.g. super neat boy leaf counter).
-- main.cpp contains SDL2 rendering code, which should be placed in a seperate file.
+- main.cpp contains SDL2 rendering code, which should be placed in a separate file.
 - Certain C functions should be replaced with equivalent C++ ones.
 
 ## Licencing
