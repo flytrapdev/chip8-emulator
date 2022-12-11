@@ -34,6 +34,8 @@ SOFTWARE.
 #define SCHIP_H 64
 #define SCHIP_WH 8192
 
+#define MAXSIZE 65024
+
 class Chip8 {
 
 public:
