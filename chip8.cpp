@@ -35,6 +35,7 @@ SOFTWARE.
 #include <cstring>
 #include <cstdlib>
 #include <unistd.h>
+#include <zlib.h>
 
 Chip8::Chip8() {
     //ROM loaded
@@ -151,7 +152,7 @@ uint8_t Chip8::loadROM(std::string filename) {
 
     len = read(fd, &byte, 1);
 
-    while(len > 0) {
+    while(len > 0 && pos <= MAXSIZE) {
         memory[0x200 + pos] = byte;
         len = read(fd, &byte, 1);
         pos ++;
@@ -159,9 +160,17 @@ uint8_t Chip8::loadROM(std::string filename) {
 
     close(fd);
 
+    if(pos > MAXSIZE) {
+        std::cout << "ROM file too large (more than " << std::dec << (int)MAXSIZE << " bytes)" << std::endl;
+        return 1;
+    }
+
     std::cout << "Loaded : " << pos << " bytes" << std::endl;
 
     loaded = true;
+
+    //CRC32
+    std::cout << std::hex << "CRC32 " << crc32(0, (Bytef *) memory + 0x200, pos) << std::endl;
 
     return 0;
 

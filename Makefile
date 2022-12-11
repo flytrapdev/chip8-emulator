@@ -1,7 +1,7 @@
 CC := g++
 RM := rm -f
-CFLAGS := $(shell pkg-config --cflags sdl2)
-LIBS := $(shell pkg-config --libs sdl2)
+CFLAGS := $(shell pkg-config --cflags sdl2 zlib)
+LIBS := $(shell pkg-config --libs sdl2 zlib)
 
 TARGET = ch8emu
 
