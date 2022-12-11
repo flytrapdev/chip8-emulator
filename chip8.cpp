@@ -72,7 +72,6 @@ void Chip8::initialize() {
     opcode = 0; //Current opcode
 
     hiRes = false;
-    drawFlag = true;
 
     //Stop flag used by SUPERCHIP
     stopped = false;
@@ -271,8 +270,6 @@ void Chip8::scrollLeft(uint8_t pixels) {
             memset(gfx[1] + SCHIP_W - pixels + y0*SCHIP_W,   false,   pixels);
         }
     }
-
-    drawFlag = true;
 }
 
 //Scroll right
@@ -289,8 +286,6 @@ void Chip8::scrollRight(uint8_t pixels) {
             memset(gfx[1] + y0*SCHIP_W,   false,   pixels);
         }
     }
-
-    drawFlag = true;
 }
 
 //Scroll down
@@ -305,9 +300,6 @@ void Chip8::scrollDown(uint8_t pixels) {
         memmove(gfx[1] + SCHIP_W * pixels,   gfx[1],   SCHIP_W * (SCHIP_H - pixels));
         memset(gfx[1],   false,   SCHIP_W * pixels);
     }
-
-
-    drawFlag = true;
 }
 
 //Scroll up
@@ -322,8 +314,6 @@ void Chip8::scrollUp(uint8_t pixels) {
         memmove(gfx[1],   gfx[1] + SCHIP_W * pixels,   SCHIP_W * (SCHIP_H - pixels));
         memset(gfx[1] + SCHIP_W * (SCHIP_H - pixels),   false,   SCHIP_W * pixels);
     }
-
-    drawFlag = true;
 }
 
 //Draw pixel to the gfx buffer
@@ -378,7 +368,6 @@ void Chip8::emulateInstruction() {
                         if((bitPlane & 0x2) != 0)
                             memset(gfx[1], false, SCHIP_WH);
 
-                        drawFlag = true;
                         break;
                     }
 
@@ -419,7 +408,6 @@ void Chip8::emulateInstruction() {
                         memset(gfx, false, SCHIP_WH * 2);
 
                         hiRes = false;
-                        drawFlag = true;
                         break;
                     }
 
@@ -430,7 +418,6 @@ void Chip8::emulateInstruction() {
                         memset(gfx, false, SCHIP_WH * 2);
 
                         hiRes = true;
-                        drawFlag = true;
                         break;
                     }
 
@@ -800,7 +787,6 @@ void Chip8::emulateInstruction() {
 
             }
 
-            drawFlag = true;
             break;
         }
 

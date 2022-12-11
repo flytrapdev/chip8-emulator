@@ -76,9 +76,6 @@ public:
     //SCHIP hi-res mode
     bool hiRes;
 
-    //Draw flag
-    bool drawFlag;
-
     //Interpreter stopped
     bool stopped;
 
