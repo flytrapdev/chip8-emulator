@@ -340,8 +340,14 @@ void Chip8::pixel(uint8_t x, uint8_t y, uint8_t sprPlane) {
 //Emulate CHIP-8 instruction
 void Chip8::emulateInstruction() {
 
+    // Waiting for key press
+    if(waiting)
+        pc -= 2;
+
+    // Read next opcode
     opcode = nextWord();
 
+    // Execute
     switch(opcode & 0xF000) {
 
         case 0x0000:{
@@ -859,13 +865,8 @@ void Chip8::emulateInstruction() {
                 case 0x000A: {
                     //0xFX0A
                     //Wait for key press then store key into Vx
-                    uint8_t key = checkKeys();
-
-                    if(key < 16)
-                        v[x] = key;
-                    else
-                        pc -= 2;
-
+                    waiting = true;
+                    waitRegister = x;
                     break;
                 }
 
@@ -885,7 +886,7 @@ void Chip8::emulateInstruction() {
 
                 case 0x001E: {
                     //0xFX1E
-                    //Set I = I + VX
+                    //Set I = I + VX                    
                     uint8_t carry = (I + v[x] > 0xFFF)? 1 : 0;
 
                     I += v[x];
@@ -895,7 +896,7 @@ void Chip8::emulateInstruction() {
                     // Spacefight 2091 requires this to be enabled
                     // TODO : investigate this, make it a separate quirk
                     if(shiftQuirk)
-                    v[0xF] = carry;
+                        v[0xF] = carry;
 
                     break;
                 }

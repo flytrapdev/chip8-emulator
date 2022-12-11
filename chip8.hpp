@@ -74,6 +74,8 @@ public:
 
     //Keys
     bool keys[16];
+    uint8_t waitRegister = 0;
+    bool waiting = false;
 
     //SCHIP hi-res mode
     bool hiRes;

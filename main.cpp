@@ -78,6 +78,13 @@ int main(int argc, char** argv)
         SDLK_4, SDLK_r, SDLK_f, SDLK_v
     };
 
+    SDL_Keycode keyShortcuts[] = {
+        0, 0, 0, 0,
+        0, SDLK_UP, SDLK_SPACE, SDLK_LEFT,
+        SDLK_DOWN, SDLK_RIGHT, 0, 0,
+        0, 0, 0, 0,
+    };
+
     //Emulation properties
     int cycles = CYCLES_DEFAULT;  // CHIP-8 cycles per frame
     uint8_t keySet = KB_DEFAULT;  // 0-QWERTY 1-AZERTY
@@ -331,10 +338,11 @@ int main(int argc, char** argv)
                 }
 
                 case SDL_KEYDOWN: {
-                    unsigned short i;
+                    uint16_t i;
+                    SDL_Keycode sdlSym = event.key.keysym.sym;
 
                     for(i = 0 ; i < 16 ; i++) {
-                        if(event.key.keysym.sym == keyBindings[i + 16*keySet]) {
+                        if(sdlSym == keyBindings[i + 16*keySet] || sdlSym == keyShortcuts[i]) {
                             chip8 -> keys[i] = true;
                             break;
                         }
@@ -384,12 +392,6 @@ int main(int argc, char** argv)
                             break;
                         }
 
-                        case SDLK_UP:       chip8 -> keys[5] = true; break;
-                        case SDLK_LEFT:     chip8 -> keys[7] = true; break;
-                        case SDLK_DOWN:     chip8 -> keys[8] = true; break;
-                        case SDLK_RIGHT:    chip8 -> keys[9] = true; break;
-                        case SDLK_SPACE:    chip8 -> keys[6] = true; break;
-
                         default : break;
                     }
 
@@ -397,23 +399,20 @@ int main(int argc, char** argv)
                 }
 
                 case SDL_KEYUP: {
-                    unsigned short i;
+                    uint16_t i;
+                    SDL_Keycode sdlSym = event.key.keysym.sym;
 
                     for(i = 0 ; i < 16 ; i++) {
-                        if(event.key.keysym.sym == keyBindings[i + 16*keySet]) {
+                        if(sdlSym == keyBindings[i + 16*keySet] || sdlSym == keyShortcuts[i]) {
                             chip8->keys[i] = false;
+
+                            if(chip8->waiting) {
+                                chip8->v[chip8->waitRegister] = i;
+                                chip8->waiting = false;
+                            }
+
                             break;
                         }                            
-                    }
-
-                    switch(event.key.keysym.sym) {
-                        case SDLK_UP:       chip8 -> keys[5] = false; break;
-                        case SDLK_LEFT:     chip8 -> keys[7] = false; break;
-                        case SDLK_DOWN:     chip8 -> keys[8] = false; break;
-                        case SDLK_RIGHT:    chip8 -> keys[9] = false; break;
-                        case SDLK_SPACE:    chip8 -> keys[6] = false; break;
-
-                        default : break;
                     }
 
                     break;
@@ -425,10 +424,10 @@ int main(int argc, char** argv)
         }
 
         //Emulate cycles
-        if(!paused and !chip8->stopped){
+        if(!paused && !chip8->stopped){
 
             for(int i = 0 ; i < cycles ; i++)
-				chip8 -> emulateInstruction();
+                chip8 -> emulateInstruction();
 
         }
 
@@ -479,8 +478,6 @@ int main(int argc, char** argv)
 
         //Update display
         SDL_RenderPresent(renderer);
-
-        chip8 -> drawFlag = false;
     }
 
 
