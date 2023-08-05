@@ -1,0 +1,2622 @@
+{
+    "dcd6f5fc": {
+        "title": "Octojam 1 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam1title.gif"
+        ],
+        "desc": "Greeting program for the Octo-ber 2014 Chip8 Game Jam.",
+        "event": "Octojam1",
+        "release": "2014-09-29",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "FFAA00",
+            "backgroundColor": "AA4400",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "7e6232aa": {
+        "title": "Octojam 2 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam2title.gif"
+        ],
+        "desc": "This title card draws a nearly full screen 64x30 animation with very low flicker.",
+        "event": "Octojam2",
+        "release": "2015-09-21",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "FFAA00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "AA4400",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "51ad00fc": {
+        "title": "Octojam 3 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam3title.gif"
+        ],
+        "desc": "This title card disambiguates at runtime between a COSMAC VIP, SCHIP, and Octo.",
+        "event": "Octojam3",
+        "release": "2016-09-25",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "FFAA00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "AA4400",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "85cb8541": {
+        "title": "Octojam 4 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam4title.gif"
+        ],
+        "desc": "This title card demonstrates the new :macro and :calc directives.",
+        "event": "Octojam4",
+        "release": "2017-09-23",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "30",
+            "fillColor": "FFAA00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "AA4400",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "5d5d4ce3": {
+        "title": "Octojam 5 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam5title.gif"
+        ],
+        "desc": "Greeting program for the fifth annual 2018 Octojam.",
+        "event": "Octojam5",
+        "release": "2018-09-24",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "navy",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "hotpink",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "997533d5": {
+        "title": "Octojam 6 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam6title.gif"
+        ],
+        "desc": "Greeting program for the sixth annual 2019 Octojam.",
+        "event": "Octojam6",
+        "release": "2019-09-07",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "330033",
+            "fillColor2": "00FFFF",
+            "blendColor": "FFFFFF",
+            "backgroundColor": "AAAAFF",
+            "buzzColor": "990099",
+            "quietColor": "330033",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0
+        }
+    },
+    "8ec85d5e": {
+        "title": "Octojam 7 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam7title.gif"
+        ],
+        "desc": "Greeting program for the seventh annual 2020 Octojam.",
+        "event": "Octojam7",
+        "release": "2020-08-07",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 30,
+            "fillColor": "ff8c1f",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "662200",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "logicQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "fontStyle": "octo"
+        }
+    },
+    "293224be": {
+        "title": "Octojam 8 Title",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octojam8title.gif"
+        ],
+        "desc": "Greeting program for the eighth annual 2021 Octojam.",
+        "event": "Octojam8",
+        "release": "2021-10-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "FFAA00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "AA4400",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "logicQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "fontStyle": "fish"
+        }
+    },
+    "319bd2": {
+        "title": "Into The GarlicScape",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "Collect aliums, avoid moths, pet llamas. A template program for Octojam 7.",
+        "event": "Octojam7",
+        "release": "2020-08-01",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "lightcyan",
+            "fillColor2": "aquamarine",
+            "blendColor": "aquamarine",
+            "backgroundColor": "001000",
+            "buzzColor": "333333",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "logicQuirks": false,
+            "fontStyle": "octo"
+        }
+    },
+    "d19d5321": {
+        "title": "Super NeatBoy",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "Jump, fall, tidy up leaves. A template program for Octojam 7.",
+        "event": "Octojam7",
+        "release": "2020-08-01",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "lavender",
+            "fillColor2": "deeppink",
+            "blendColor": "deeppink",
+            "backgroundColor": "100010",
+            "buzzColor": "black",
+            "quietColor": "black",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": true,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": "65024",
+            "touchInputMode": "none",
+            "logicQuirks": false,
+            "fontStyle": "octo"
+        }
+    },
+    "92e250ca": {
+        "title": "Eaty The Alien",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "eaty.gif"
+        ],
+        "desc": "An incredible intergalactic adventure.",
+        "event": "Octojam2",
+        "release": "2015-10-31",
+        "platform": "schip",
+        "options": {
+            "tickrate": "200",
+            "fillColor": "443300",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "aa7700",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "7bf7a0cc": {
+        "title": "Fuse",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "fuse.gif"
+        ],
+        "desc": "A minimalist reinterpretation of the classic Pipe Dream.",
+        "event": "Octojam3",
+        "release": "2016-10-27",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "fillColor": "306230",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "8BAC0F",
+            "buzzColor": "333333",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "8bd69060": {
+        "title": "Black Rainbow",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "blackrainbow.gif"
+        ],
+        "desc": "Plumb the depths of your subconscious and bring back the motherlode...",
+        "event": "Octojam3",
+        "release": "2016-11-01",
+        "platform": "schip",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "lightgray",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "808080",
+            "buzzColor": "ffffff",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "7713ca7a": {
+        "title": "Slippery Slope",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "slipperyslope.gif"
+        ],
+        "desc": "The ice we skate is getting pretty thin. The water's getting warm so you might as well swim.",
+        "event": "Octojam5",
+        "release": "2018-10-31",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 30,
+            "fillColor": "navy",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "powderblue",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "d3ae6f4c": {
+        "title": "ChipWar",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "chipwar.gif"
+        ],
+        "desc": "A (loose) adaptation of the classic DiceWars.",
+        "release": "2014-06-06",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "backgroundColor": "6699FF",
+            "fillColor": "000066",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000"
+        }
+    },
+    "ca1ac4c4": {
+        "title": "Cave Explorer",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "cave1.gif",
+            "cave2.gif"
+        ],
+        "desc": "Do you have what it takes to be a Cave Explorer?",
+        "release": "2014-06-22",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "20",
+            "backgroundColor": "996600",
+            "fillColor": "FFCC00",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000"
+        }
+    },
+    "846a766a": {
+        "title": "Sw8 Copter",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "sweetcopter.gif"
+        ],
+        "desc": "An adaptation of \"Swing Copters\" for the Super Chip8.",
+        "release": "2014-09-02",
+        "platform": "schip",
+        "options": {
+            "tickrate": "100",
+            "backgroundColor": "117799",
+            "fillColor": "ffffff",
+            "buzzColor": "1166DD",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "82d2dba8": {
+        "title": "Wonky Pong",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "wonkypong.gif"
+        ],
+        "desc": "Pong, but wonky. Made for Octojam IV.",
+        "event": "Octojam4",
+        "release": "2018-11-01",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "100",
+            "backgroundColor": "FFFFFF",
+            "fillColor": "000000",
+            "buzzColor": "666666",
+            "quietColor": "000000"
+        }
+    },
+    "1e6e34bd": {
+        "title": "Grad School Simulator 2014",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "gradsim.gif"
+        ],
+        "desc": "Welcome to the sunless depths of my ennui.",
+        "release": "2014-09-15",
+        "platform": "schip",
+        "options": {
+            "tickrate": "20",
+            "backgroundColor": "808080",
+            "fillColor": "black",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "ebc46cb1": {
+        "title": "Mondri8",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "mondrian.gif"
+        ],
+        "desc": "Draw random compositions in the style of Piet Mondrian.",
+        "release": "2014-09-25",
+        "platform": "schip",
+        "options": {
+            "tickrate": "100",
+            "backgroundColor": "996600",
+            "fillColor": "FFCC00",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "4bcde0a": {
+        "title": "Outlaw",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "outlaw.gif"
+        ],
+        "desc": "An adaptation of the Atari 2600 game \"Outlaw\" for the Chip8.",
+        "release": "2014-07-17",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "backgroundColor": "664400",
+            "fillColor": "AA4400",
+            "buzzColor": "coral",
+            "quietColor": "000000"
+        }
+    },
+    "cc8dacc1": {
+        "title": "RPS",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "rps_oj1.gif"
+        ],
+        "desc": "Classic \"Rock Paper Scissors\" game for the Chip8.",
+        "release": "2015-10-25",
+        "platform": "chip8",
+        "event": "Octojam1",
+        "options": {
+            "tickrate": "7",
+            "backgroundColor": "AA9999",
+            "fillColor": "220000",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "96eb506d": {
+        "title": "Octo: a Chip 8 Story",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "octoachip8story.gif"
+        ],
+        "desc": "A visual novel game for the Chip8.",
+        "release": "2015-10-29",
+        "platform": "chip8",
+        "event": "Octojam1",
+        "options": {
+            "tickrate": "7",
+            "backgroundColor": "111111",
+            "fillColor": "EEEEEE",
+            "buzzColor": "FFFF00",
+            "quietColor": "222222",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "7245c957": {
+        "title": "Pumpkin \"Dreess\" Up",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "pumpkindressup.gif"
+        ],
+        "desc": "Classic Adobe Flash games, now in Chip8.",
+        "release": "2015-11-01",
+        "platform": "chip8",
+        "event": "Octojam1",
+        "options": {
+            "tickrate": "7",
+            "backgroundColor": "FFA500",
+            "fillColor": "111122",
+            "buzzColor": "FFFF00",
+            "quietColor": "222222",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "894aa05c": {
+        "title": "Pet Dog",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "petdog.gif"
+        ],
+        "desc": "Undertale fangame made in Chip8.",
+        "release": "2015-10-31",
+        "platform": "chip8",
+        "event": "Octojam2",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "fafafa",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0c0c0c",
+            "buzzColor": "fafafa",
+            "quietColor": "1a1a1a",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "6181bfb8": {
+        "title": "8CE Attourny - Disc 1",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "8ceattourny_d1.gif"
+        ],
+        "desc": "Exciting court battles in Chip8! Disc 1/3 of an exciting multi-tape game.",
+        "release": "2016-10-30",
+        "platform": "chip8",
+        "event": "Octojam3",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "f1f1f1",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0f0f0f",
+            "buzzColor": "aaff55",
+            "quietColor": "777777",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "a0855bf8": {
+        "title": "8CE Attourny - Disc 2",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "8ceattourny_d2.gif"
+        ],
+        "desc": "Exciting court battles in Chip8! Disc 2/3 of an exciting multi-tape game.",
+        "release": "2016-10-30",
+        "platform": "chip8",
+        "event": "Octojam3",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "f1f1f1",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0f0f0f",
+            "buzzColor": "aaff55",
+            "quietColor": "777777",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "92464021": {
+        "title": "8CE Attourny - Disc 3",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "8ceattourny_d3.gif"
+        ],
+        "desc": "Exciting court battles in Chip8! Disc 3/3 of an exciting multi-tape game.",
+        "release": "2016-10-30",
+        "platform": "chip8",
+        "event": "Octojam3",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "f1f1f1",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0f0f0f",
+            "buzzColor": "aaff55",
+            "quietColor": "777777",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "7caf14b6": {
+        "title": "DVN8",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "DVN8.gif"
+        ],
+        "desc": "This is your great-grandma's dungeon crawler. You can see it with the manual at https://systemlogoff.com/share/DVN8/index.html",
+        "release": "2017-10-30",
+        "platform": "schip",
+        "event": "Octojam4",
+        "options": {
+            "tickrate": "20",
+            "fillColor": "1f1f1f",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "f0f0f0",
+            "buzzColor": "aa2222",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "a5569572": {
+        "title": "Octo Rancher",
+        "authors": [
+            "SystemLogoff"
+        ],
+        "images": [
+            "octorancher.gif"
+        ],
+        "desc": "Train monsters and become a real ranching champion. Read the manual at https://systemlogoff.com/share/Octo-Rancher-Manual.pdf",
+        "release": "2018-10-30",
+        "platform": "chip8",
+        "event": "Octojam5",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "f1f1f1",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0f0f0f",
+            "buzzColor": "aaff55",
+            "quietColor": "777777",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "b9ee2e0b": {
+        "title": "Tank!",
+        "authors": [
+            "Rectus"
+        ],
+        "images": [
+            "tank.gif"
+        ],
+        "desc": "A two player artillery game.",
+        "event": "Octojam5",
+        "release": "2018-10-31",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "200"
+        }
+    },
+    "36df976a": {
+        "title": "Rockto",
+        "authors": [
+            "SupSuper"
+        ],
+        "images": [
+            "rockto.gif"
+        ],
+        "desc": "An adaptation of \"Boulder Dash\" for the Chip8.",
+        "event": "Octojam1",
+        "release": "2014-11-01",
+        "platform": "schip",
+        "options": {
+            "tickrate": "15",
+            "fillColor": "CCCCCC",
+            "backgroundColor": "333333",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000"
+        }
+    },
+    "927a336": {
+        "title": "Flight Runner",
+        "authors": [
+            "TodPunk"
+        ],
+        "images": [
+            "flightrunner.gif"
+        ],
+        "desc": "A simple flight runner for the Chip8.",
+        "event": "Octojam1",
+        "release": "2014-11-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "fillColor": "FFCC00",
+            "backgroundColor": "0000FF",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000"
+        }
+    },
+    "57bf1f94": {
+        "title": "Turnover '77",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "turnover.gif"
+        ],
+        "desc": "Roundabout de-make",
+        "event": "Octojam1",
+        "release": "2014-08-31",
+        "platform": "schip",
+        "options": {
+            "tickrate": "200",
+            "fillColor": "FFe900",
+            "backgroundColor": "ED7f37",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "9af75a01": {
+        "title": "Ultimate Tic-tac-toe",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "tictac.gif"
+        ],
+        "desc": "Two player game",
+        "event": "Octojam1",
+        "release": "2014-09-01",
+        "platform": "schip",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "553300",
+            "backgroundColor": "FFFFFF",
+            "buzzColor": "FFAA00",
+            "quietColor": "FFFFFF",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "86877566": {
+        "title": "T8NKS",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "tanks.gif"
+        ],
+        "desc": "Artillery game",
+        "event": "Octojam2",
+        "release": "2015-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "554422",
+            "fillColor2": "456543",
+            "blendColor": "EEEEFF",
+            "backgroundColor": "87CEEB",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "8e91a0ea": {
+        "title": "Octo paint",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "paint.gif"
+        ],
+        "desc": "Drawing Program",
+        "release": "2016-06-12",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "30",
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "51b1b286": {
+        "title": "jub8 Song 1",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j1title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "846c5d73": {
+        "title": "jub8 Song 2",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j2title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "c99eedcf": {
+        "title": "jub8 Song 3",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j3title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "6e5d73c": {
+        "title": "jub8 Song 4",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j4title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "eb0097da": {
+        "title": "jub8 Song 5",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j5title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "f535915f": {
+        "title": "jub8 Song 6",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "j6title.gif"
+        ],
+        "desc": "Rhythm game. WARNING: Volume",
+        "event": "Octojam3",
+        "release": "2016-08-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "000000",
+            "fillColor2": "FDFFD5",
+            "blendColor": "BA5A1A",
+            "backgroundColor": "353C41",
+            "buzzColor": "353C41",
+            "quietColor": "353C41",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "80433485": {
+        "title": "Sub-Terr8nia",
+        "authors": [
+            "your name here"
+        ],
+        "images": [
+            "sub8.gif"
+        ],
+        "desc": "Lander game",
+        "event": "Octojam4",
+        "release": "2017-08-31",
+        "platform": "schip",
+        "options": {
+            "tickrate": "60",
+            "fillColor": "ffffff",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "000000",
+            "buzzColor": "FFAA00",
+            "quietColor": "111111",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 270
+        }
+    },
+    "bc7eb54d": {
+        "title": "Octopeg",
+        "authors": [
+            "Chromatophore"
+        ],
+        "images": [
+            "octopeg.gif"
+        ],
+        "desc": "Peggle clone for Superchip",
+        "event": "Octojam2",
+        "release": "2015-10-29",
+        "platform": "schip",
+        "options": {
+            "tickrate": "200",
+            "fillColor": "acd5ff",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "113152",
+            "buzzColor": "264c74",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "97cd7896": {
+        "title": "Masquer8",
+        "authors": [
+            "Chromatophore"
+        ],
+        "images": [
+            "masquer8.gif"
+        ],
+        "desc": "Cuttlefish pattern matching game for chip8.",
+        "event": "Octojam2",
+        "release": "2015-10-30",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "fillColor": "FF6666",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "1a3674",
+            "buzzColor": "3b6c83",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "8d462e0c": {
+        "title": "Sens8tion",
+        "authors": [
+            "Chromatophore"
+        ],
+        "images": [
+            "sens8tion.gif"
+        ],
+        "desc": "Equilibrium faithfully reproduced in schip.",
+        "event": "Octojam3",
+        "release": "2016-11-01",
+        "platform": "schip",
+        "options": {
+            "tickrate": "20",
+            "fillColor": "1a3279",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "bad9b6",
+            "buzzColor": "fff6d6",
+            "quietColor": "000000",
+            "shiftQuirks": true,
+            "loadStoreQuirks": true,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": true,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "8958dbf2": {
+        "title": "Carbon8",
+        "authors": [
+            "Chromatophore"
+        ],
+        "images": [
+            "carbon8.gif"
+        ],
+        "desc": "A period correct movie tie in game for a popular 1980s franchise.",
+        "event": "Octojam5",
+        "release": "2018-11-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "15",
+            "fillColor": "FFCC00",
+            "backgroundColor": "0000FF",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "f26e97f1": {
+        "title": "Bad Kaiju Ju",
+        "authors": [
+            "MattBooth"
+        ],
+        "images": [
+            "kaiju.gif"
+        ],
+        "desc": "The year is 1977. 90% of the world's landmass is now underwater and the world is at war...",
+        "event": "Ludum Dare",
+        "release": "2015-08-24",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "7",
+            "fillColor": "330033",
+            "backgroundColor": "AAAAFF"
+        }
+    },
+    "661fc093": {
+        "title": "Piper",
+        "authors": [
+            "Aeris",
+            "JordanMecom",
+            "LillianWang"
+        ],
+        "images": [
+            "piper.gif"
+        ],
+        "desc": "Play as a small bird to collect goodies and avoid waves.",
+        "event": "GlobalGameJam2017",
+        "release": "2017-01-23",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "200",
+            "fillColor": "FFCC00",
+            "backgroundColor": "0000FF",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "d5fe155": {
+        "title": "Super Square",
+        "authors": [
+            "tann"
+        ],
+        "images": [
+            "square.png"
+        ],
+        "desc": "Inspired by Super Hexagon",
+        "event": "Octojam1",
+        "release": "2014-11-04",
+        "platform": "schip",
+        "options": {
+            "tickrate": "500",
+            "fillColor": "FFFFFF",
+            "backgroundColor": "552200",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "a928c234": {
+        "title": "Civiliz8n",
+        "authors": [
+            "tann"
+        ],
+        "images": [
+            "civiliz8n.png"
+        ],
+        "desc": "Grow a tiny civilization in 10 turns",
+        "event": "Octojam2",
+        "release": "2016-09-26",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "100",
+            "fillColor": "754D27",
+            "fillColor2": "738C3A",
+            "blendColor": "E2CB8A",
+            "backgroundColor": "141421",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "6a54d491": {
+        "title": "Skyward",
+        "authors": [
+            "tann",
+            "JackieKircher"
+        ],
+        "images": [
+            "skyward.png"
+        ],
+        "desc": "Climb as high as you can!",
+        "event": "Octojam3",
+        "release": "2016-11-01",
+        "platform": "xochip",
+        "options": {
+            "tickrate": "1000",
+            "fillColor": "4B636F",
+            "fillColor2": "AF2D3D",
+            "blendColor": "AF2D3D",
+            "backgroundColor": "121212",
+            "buzzColor": "000000",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": true,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "f0e63d84": {
+        "title": "Mini Lights Out",
+        "authors": [
+            "tobiasvl"
+        ],
+        "images": [
+            "mini-lights-out.gif"
+        ],
+        "desc": "Turn the lights out",
+        "event": "Octojam6",
+        "release": "2019-10-04",
+        "platform": "chip8",
+        "options": {
+            "tickrate": "7",
+            "touchInputMode": "seg16"
+        }
+    },
+    "4ec3f0df": {
+        "title": "An Evening to Die For",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "murder.gif"
+        ],
+        "desc": "It is a dark and stormy night. A murder has been committed...",
+        "event": "Octojam6",
+        "release": "2019-10-22",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 500,
+            "fillColor": "000000",
+            "fillColor2": "ff0000",
+            "blendColor": "ff0000",
+            "backgroundColor": "ffffff",
+            "buzzColor": "808080",
+            "quietColor": "000000",
+            "shiftQuirks": 0,
+            "loadStoreQuirks": 0,
+            "vfOrderQuirks": 0,
+            "clipQuirks": 0,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 0,
+            "screenRotation": 0,
+            "maxSize": 65024
+        }
+    },
+    "56e2dde0": {
+        "title": "Horse World Online",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "An online horse breeding game.",
+        "event": "Octojam1",
+        "release": "2014-10-28",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 30,
+            "fillColor": "783809",
+            "backgroundColor": "a0cb6d",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "13b8e78e": {
+        "title": "Horsey Jump",
+        "authors": [
+            "LarissaR"
+        ],
+        "images": [
+            "jump.gif"
+        ],
+        "desc": "Press the X button to make the horse jump over the fence.",
+        "event": "Octojam2",
+        "release": "2015-10-30",
+        "platform": "schip",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "C3C3C3",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "006C00",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "8cbba424": {
+        "title": "Super Octo Track XO",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "Compose songs with the XO-Chip audio system.",
+        "event": "Octojam2",
+        "release": "2015-10-15",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 100,
+            "fillColor": "FF00FF",
+            "fillColor2": "00FFFF",
+            "blendColor": "FFFFFF",
+            "backgroundColor": "000000",
+            "buzzColor": "990099",
+            "quietColor": "330033",
+            "shiftQuirks": false,
+            "loadStoreQuirks": true,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "e91548e2": {
+        "title": "Ghost Escape",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "ghostescape.gif"
+        ],
+        "desc": "Seek revenge on mortal men in this exciting adventure!",
+        "event": "Octojam3",
+        "release": "2016-10-29",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "FF00FF",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "00FFFF",
+            "buzzColor": "990099",
+            "quietColor": "330033",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "ecd5422f": {
+        "title": "TOMB STON TIPP",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "tomb.gif"
+        ],
+        "desc": "Take turns pressing buttons to see who wins.",
+        "event": "Octojam5",
+        "release": "2018-10-12",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "FFFFFF",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "000000",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0,
+            "touchInputMode": "seg16"
+        }
+    },
+    "981ce388": {
+        "title": "Flutter By",
+        "authors": [
+            "TomRintjema"
+        ],
+        "images": [
+            "flutterby.gif"
+        ],
+        "desc": "A game where you are a butterfly trying to get to flowers.",
+        "event": "Octojam6",
+        "release": "2019-10-08",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "9BBC0F",
+            "fillColor2": "8BAC0F",
+            "blendColor": "306230",
+            "backgroundColor": "0F380F",
+            "buzzColor": "333333",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "d5911fb9": {
+        "title": "Br8kout",
+        "authors": [
+            "SharpenedSpoon"
+        ],
+        "images": [
+            "breakout.gif"
+        ],
+        "desc": "You can't even imagine how amazing this breakout clone is!",
+        "event": "Octojam1",
+        "release": "2014-09-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 7,
+            "fillColor": "ff84fe",
+            "backgroundColor": "ca2553",
+            "buzzColor": "FFAA00",
+            "quietColor": "f090e4",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "e4df7599": {
+        "title": "1D Cellular Automata",
+        "authors": [
+            "SharpenedSpoon"
+        ],
+        "images": [
+            "cellular.gif"
+        ],
+        "desc": "An implementation of 1D Cellular Automata.",
+        "event": "Octojam1",
+        "release": "2014-10-26",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "00f80a",
+            "backgroundColor": "274a17",
+            "buzzColor": "FFAA00",
+            "quietColor": "142a12",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false
+        }
+    },
+    "21764937": {
+        "title": "Kesha Was Bird",
+        "authors": [
+            "Kesha"
+        ],
+        "images": [
+            "kesha.gif"
+        ],
+        "desc": "A surreal telephone adventure.",
+        "release": "2016-01-21",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "B8CD9E",
+            "fillColor2": "ED656B",
+            "blendColor": "55989E",
+            "backgroundColor": "59755E",
+            "buzzColor": "000",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "c1a18093": {
+        "title": "Kesha Was Biird",
+        "authors": [
+            "Kesha"
+        ],
+        "images": [
+            "kesha.gif"
+        ],
+        "desc": "Second installment in epic saga about Kesha.",
+        "event": "Octojam3",
+        "release": "2016-10-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "1a1c19",
+            "fillColor2": "a0a29f",
+            "blendColor": "5d5b5d",
+            "backgroundColor": "fafdf9",
+            "buzzColor": "222211",
+            "quietColor": "212110",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "312a2234": {
+        "title": "Kesha Was Niiinja",
+        "authors": [
+            "Kesha"
+        ],
+        "images": [
+            "kesha.gif"
+        ],
+        "desc": "Legendary ninja returns! Who is he? Ruthless killer? Absolute evil? Character with his own purpose? His motives are still unclear, and his story is for you to unfold.",
+        "event": "Octojam4",
+        "release": "2017-10-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "b22d10",
+            "fillColor2": "10b258",
+            "blendColor": "ffffff",
+            "backgroundColor": "283593",
+            "buzzColor": "182583",
+            "quietColor": "182583",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "2a63beca": {
+        "title": "Red October V",
+        "authors": [
+            "Kesha"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "A futuristic RPG.",
+        "event": "Octojam5",
+        "release": "2018-10-31",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 10000,
+            "fillColor": "000000",
+            "fillColor2": "ffff00",
+            "blendColor": "808000",
+            "backgroundColor": "b22d10",
+            "buzzColor": "400000",
+            "quietColor": "400000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": true,
+            "screenRotation": 0
+        }
+    },
+    "4c2dbb8f": {
+        "title": "SK8 H8 1988",
+        "authors": [
+            "Willfor"
+        ],
+        "images": [
+            "sk8.gif"
+        ],
+        "desc": "Don't get trashed out there, GRRL!",
+        "event": "Octojam2",
+        "release": "2015-10-28",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "7B0201",
+            "fillColor2": "F2FAF7",
+            "blendColor": "E7ED3E",
+            "backgroundColor": "D4D4D4",
+            "buzzColor": "990099",
+            "quietColor": "330033",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "c5847648": {
+        "title": "Snake",
+        "authors": [
+            "TimoTriisa"
+        ],
+        "images": [
+            "snake.gif"
+        ],
+        "desc": "Classic Snake game without walls.",
+        "event": "Octojam1",
+        "release": "2014-10-11",
+        "platform": "schip",
+        "options": {
+            "tickrate": 15,
+            "fillColor": "84a174",
+            "backgroundColor": "30283e",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "1672d0eb": {
+        "title": "Spacejam!",
+        "authors": [
+            "WilliamDonnelly"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "An extended and enhanced version loosely based on ShipTunnel from the 2014 OctoJam.",
+        "event": "Octojam2",
+        "release": "2015-10-30",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 100,
+            "fillColor": "fcfcfc",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "111111",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "74f8eff0": {
+        "title": "Mastermind",
+        "authors": [
+            "WilliamDonnelly"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "The classic puzzle game of deduction.",
+        "event": "Octojam3",
+        "release": "2015-11-08",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "FCFCFC",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "005E20",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": false
+        }
+    },
+    "8267bfa6": {
+        "title": "Space Racer",
+        "authors": [
+            "WilliamDonnelly"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "Based on the classic 2-player 'Space Race' video game.",
+        "event": "Octojam4",
+        "release": "2017-10-30",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "FCFCFC",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "111111",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "407ab08d": {
+        "title": "down8",
+        "authors": [
+            "tinaun"
+        ],
+        "images": [
+            "down8.gif"
+        ],
+        "desc": "you fall down an endless hole and then you die!",
+        "event": "Octojam2",
+        "release": "2015-10-28",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 15,
+            "fillColor": "27130F",
+            "backgroundColor": "3DBDFA",
+            "buzzColor": "FF6600",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "cc8cb73d": {
+        "title": "Truck Simul8or",
+        "authors": [
+            "buffi"
+        ],
+        "images": [
+            "truck.gif"
+        ],
+        "desc": "You're a kid, you're a truck.",
+        "release": "2015-07-28",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "7a70657e": {
+        "title": "Danm8ku",
+        "authors": [
+            "buffi"
+        ],
+        "images": [
+            "title.gif",
+            "gameplay.gif"
+        ],
+        "desc": "Bullet hell for the Chip-8! Survive 8 waves of exciting bullet patterns!",
+        "event": "Octojam2",
+        "release": "2015-10-31",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "00FF00",
+            "fillColor2": "FF0000",
+            "blendColor": "FFFF00",
+            "backgroundColor": "000000",
+            "buzzColor": "999900",
+            "quietColor": "333300",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "f66a28d1": {
+        "title": "The Binding of COSMAC",
+        "authors": [
+            "buffi"
+        ],
+        "images": [
+            "title.gif"
+        ],
+        "desc": "Simplified Isaac demake for SCHIP. 42 screens across three floors with an exciting boss battle at the end!",
+        "event": "Octojam3",
+        "release": "2016-10-21",
+        "platform": "schip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": true,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "c2947345": {
+        "title": "Chipcross",
+        "authors": [
+            "buffi"
+        ],
+        "images": [
+            "chipcross.gif"
+        ],
+        "desc": "16 levels of Picross implemented in CHIP8. 800 bytes of fun.",
+        "event": "Octojam5",
+        "release": "2018-10-15",
+        "platform": "schip",
+        "options": {
+            "tickrate": 20,
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "6c9503da": {
+        "title": "Knight",
+        "authors": [
+            "simonpacis"
+        ],
+        "images": [
+            "knight.gif"
+        ],
+        "desc": "You're Artore the Puny, littlebrother and inferior to your great big brother, King Arthur.",
+        "event": "Octojam3",
+        "release": "2016-10-07",
+        "platform": "schip",
+        "options": {
+            "tickrate": "200",
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "jumpQuirks": false,
+            "enableXO": false,
+            "screenRotation": 0
+        }
+    },
+    "acae9fe6": {
+        "title": "Chipquarium",
+        "authors": [
+            "mattmik"
+        ],
+        "images": [
+            "chipquarium.gif"
+        ],
+        "desc": "A CHIP-8 fish tank simulator.",
+        "event": "Octojam3",
+        "release": "2016-10-31",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 15,
+            "fillColor": "FFFFFF",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "0072ff",
+            "buzzColor": "FFAA00",
+            "quietColor": "0000FF",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": true,
+            "vBlankQuirks": true,
+            "jumpQuirks": false,
+            "logicQuirks": true,
+            "screenRotation": 0,
+            "maxSize": 3215,
+            "touchInputMode": "none"
+        }
+    },
+    "611da88d": {
+        "title": "Glitch Ghost",
+        "authors": [
+            "JackieKircher"
+        ],
+        "images": [
+            "glitchGhost.gif"
+        ],
+        "desc": "glitch ghost is all alone in the cemetery, please help them make some friends by turning the trespassing humans into new ghosts!",
+        "event": "Octojam1",
+        "release": "2014-10-29",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 200,
+            "fillColor": "FFFFFF",
+            "backgroundColor": "555555",
+            "buzzColor": "FFFFFF",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false
+        }
+    },
+    "1325c13d": {
+        "title": "Octovore",
+        "authors": [
+            "JackieKircher"
+        ],
+        "images": [
+            "octovore.gif"
+        ],
+        "desc": "a game of hungry hungry octopods",
+        "event": "Octojam2",
+        "release": "2015-11-02",
+        "platform": "schip",
+        "options": {
+            "tickrate": 120,
+            "fillColor": "5B1B96",
+            "fillColor2": "E03B22",
+            "blendColor": "68E022",
+            "backgroundColor": "8BDCE8",
+            "buzzColor": "68E022",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "enableXO": true
+        }
+    },
+    "13c37748": {
+        "title": "Business Is Contagious",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "business.gif"
+        ],
+        "desc": "capitalism.txt",
+        "event": "NokiaJam",
+        "release": "2020-02-05",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "43523d",
+            "fillColor2": "43523d",
+            "blendColor": "43523d",
+            "backgroundColor": "c7f0d8",
+            "buzzColor": "43523d",
+            "quietColor": "43523d",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": "65024",
+            "touchInputMode": "gamepad",
+            "logicQuirks": false,
+            "displayScale": "6"
+        }
+    },
+    "93c5706": {
+        "title": "Nokia 3310 Template",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "simcard.gif"
+        ],
+        "desc": "SCHIP template program for resembling the Nokia 3310",
+        "event": "NokiaJam",
+        "release": "2020-01-20",
+        "platform": "schip",
+        "options": {
+            "tickrate": 30,
+            "fillColor": "c7f0d8",
+            "fillColor2": "c7f0d8",
+            "blendColor": "c7f0d8",
+            "backgroundColor": "43523d",
+            "buzzColor": "43523d",
+            "quietColor": "43523d",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": "65024",
+            "logicQuirks": false,
+            "displayScale": "6"
+        }
+    },
+    "c3a20ac2": {
+        "title": "Expedition.",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "A short narrative about going outside.",
+        "event": "NokiaJam",
+        "release": "2021-01-06",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "43523d",
+            "fillColor2": "43523d",
+            "blendColor": "43523d",
+            "backgroundColor": "c7f0d8",
+            "buzzColor": "43523d",
+            "quietColor": "43523d",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": "65024",
+            "touchInputMode": "none",
+            "logicQuirks": false,
+            "fontStyle": "octo"
+        }
+    },
+    "5530bec0": {
+        "title": "Octo Party Mix!",
+        "authors": [
+            "Cratmang"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "It's basically Warioware. But with cute octo buddies!",
+        "event": "Octojam7",
+        "release": "2020-10-29",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "55ff55",
+            "fillColor2": "ff7700",
+            "blendColor": "ffffff",
+            "backgroundColor": "000000",
+            "buzzColor": "000000",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "swipe",
+            "logicQuirks": false,
+            "fontStyle": "octo"
+        }
+    },
+    "f13c7bc0": {
+        "title": "Chicken Scratch",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "gameplay.gif"
+        ],
+        "desc": "What if Pac-Man, but Chicken?",
+        "event": "Octojam7",
+        "release": "2020-10-28",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 500,
+            "fillColor": "7C4300",
+            "fillColor2": "FD8100",
+            "blendColor": "FD8100",
+            "backgroundColor": "D5A08C",
+            "buzzColor": "3C2300",
+            "quietColor": "000000",
+            "shiftQuirks": 0,
+            "loadStoreQuirks": 0,
+            "vfOrderQuirks": false,
+            "clipQuirks": 0,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 0,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "logicQuirks": 0,
+            "fontStyle": "octo"
+        }
+    },
+    "dd2e5359": {
+        "title": "Applejak",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "Interpreter for a subset of APL/K.",
+        "event": "Octojam7",
+        "release": "2020-10-07",
+        "platform": "schip",
+        "options": {
+            "tickrate": 100,
+            "fillColor": "B00000",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "001000",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": 1,
+            "loadStoreQuirks": 1,
+            "vfOrderQuirks": false,
+            "clipQuirks": 1,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 1,
+            "screenRotation": 0,
+            "maxSize": 3583,
+            "touchInputMode": "none",
+            "logicQuirks": 0
+        }
+    },
+    "4fdc1b4a": {
+        "title": "Bulb",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "llama.gif"
+        ],
+        "desc": "Interpreter for a language which resembles toenail clippings.",
+        "event": "Octojam7",
+        "release": "2020-10-15",
+        "platform": "schip",
+        "options": {
+            "tickrate": 100,
+            "fillColor": "1E90FF",
+            "fillColor2": "ABCC47",
+            "blendColor": "00131A",
+            "backgroundColor": "F9FFB3",
+            "buzzColor": "F9FFB3",
+            "quietColor": "000000",
+            "shiftQuirks": 1,
+            "loadStoreQuirks": 1,
+            "vfOrderQuirks": false,
+            "clipQuirks": 1,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 1,
+            "screenRotation": 0,
+            "maxSize": 3583,
+            "touchInputMode": "none",
+            "logicQuirks": 0,
+            "fontStyle": "octo"
+        }
+    },
+    "8d138689": {
+        "title": "Squad",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "fibs.gif"
+        ],
+        "desc": "Interpreter for a regular-sized Forth.",
+        "event": "Octojam7",
+        "release": "2020-10-25",
+        "platform": "schip",
+        "options": {
+            "tickrate": 500,
+            "fillColor": "FFAF00",
+            "fillColor2": "FD8100",
+            "blendColor": "FD8100",
+            "backgroundColor": "663300",
+            "buzzColor": "F9FFB3",
+            "quietColor": "000000",
+            "shiftQuirks": 1,
+            "loadStoreQuirks": 1,
+            "vfOrderQuirks": false,
+            "clipQuirks": 1,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 1,
+            "screenRotation": 0,
+            "maxSize": 3583,
+            "touchInputMode": "none",
+            "logicQuirks": 0,
+            "fontStyle": "octo"
+        }
+    },
+    "f7cc571e": {
+        "title": "Spock Paper Scissors",
+        "authors": [
+            "fontz"
+        ],
+        "images": [
+            "spockpaperscissors.gif"
+        ],
+        "desc": "Intergalactic Rock Paper Scissors.",
+        "event": "Octojam7",
+        "release": "2020-11-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 15,
+            "fillColor": "B4B4B4",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "323232",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "logicQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 3584,
+            "touchInputMode": "none",
+            "fontStyle": "octo"
+        }
+    },
+    "edf2fe36": {
+        "title": "Dodge",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "dodge.gif"
+        ],
+        "desc": "Dodging asteroids in 56 bytes.",
+        "event": "Octojam8",
+        "release": "2021-10-01",
+        "platform": "schip",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "swipe",
+            "logicQuirks": false,
+            "fontStyle": "octo",
+            "displayScale": "4"
+        }
+    },
+    "ff73793b": {
+        "title": "Snek",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "snek.gif"
+        ],
+        "desc": "Minimalist Snake in 65 bytes.",
+        "event": "Octojam8",
+        "release": "2021-10-01",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 1000,
+            "fillColor": "FFCC00",
+            "fillColor2": "FF6600",
+            "blendColor": "662200",
+            "backgroundColor": "996600",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "swipe",
+            "logicQuirks": false,
+            "fontStyle": "octo",
+            "displayScale": "4"
+        }
+    },
+    "35c089ce": {
+        "title": "Super Octogon",
+        "authors": [
+            "JohnEarnest"
+        ],
+        "images": [
+            "octogon.gif"
+        ],
+        "desc": "Eight fantastic sides, and eight awesome angles.",
+        "event": "Octojam8",
+        "release": "2021-10-30",
+        "platform": "schip",
+        "options": {
+            "tickrate": 200,
+            "fillColor": "hotpink",
+            "fillColor2": "333333",
+            "blendColor": "FFFFFF",
+            "backgroundColor": "000000",
+            "buzzColor": "111111",
+            "quietColor": "000000",
+            "shiftQuirks": 1,
+            "loadStoreQuirks": 1,
+            "vfOrderQuirks": false,
+            "clipQuirks": 1,
+            "vBlankQuirks": 0,
+            "jumpQuirks": 1,
+            "screenRotation": 0,
+            "maxSize": 3583,
+            "touchInputMode": "swipe",
+            "logicQuirks": 0,
+            "fontStyle": "fish",
+            "displayScale": "4"
+        }
+    },
+    "10aa105c": {
+        "title": "Ordinary Idle Garden",
+        "authors": [
+            "Cratmang"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "Grow a tiny garden filled with dandelions, pumpkins... lanturns... skeletons?",
+        "event": "NokiaJam",
+        "release": "2021-02-05",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 200,
+            "fillColor": "43523d",
+            "fillColor2": "43523d",
+            "blendColor": "43523d",
+            "backgroundColor": "c7f0d8",
+            "buzzColor": "43523d",
+            "quietColor": "43523d",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "logicQuirks": false,
+            "fontStyle": "fish"
+        }
+    },
+    "6d13a278": {
+        "title": "Octoma",
+        "authors": [
+            "Cratmang"
+        ],
+        "images": [
+            "recording.gif"
+        ],
+        "desc": "A simplified clone of Ultima. Go forth and save the Octo Princess!",
+        "event": "Octojam8",
+        "release": "2021-10-25",
+        "platform": "xochip",
+        "options": {
+            "tickrate": 10000,
+            "fillColor": "FF00FF",
+            "fillColor2": "00FFFF",
+            "blendColor": "FFFFFF",
+            "backgroundColor": "000000",
+            "buzzColor": "000000",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 65024,
+            "touchInputMode": "none",
+            "logicQuirks": false,
+            "fontStyle": "fish"
+        }
+    },
+    "949512fa": {
+        "title": "Super Pong",
+        "authors": [
+            "offstatic"
+        ],
+        "images": [
+            "superpong.gif"
+        ],
+        "desc": "A fast pong-like.",
+        "event": "Octojam8",
+        "release": "2021-10-15",
+        "platform": "chip8",
+        "options": {
+            "tickrate": 30,
+            "fillColor": "43523d",
+            "fillColor2": "ff6600",
+            "blendColor": "662200",
+            "backgroundColor": "c7f0d8",
+            "buzzColor": "FFAA00",
+            "quietColor": "000000",
+            "shiftQuirks": false,
+            "loadStoreQuirks": false,
+            "vfOrderQuirks": false,
+            "clipQuirks": false,
+            "vBlankQuirks": false,
+            "jumpQuirks": false,
+            "logicQuirks": false,
+            "screenRotation": 0,
+            "maxSize": 3584,
+            "touchInputMode": "none",
+            "fontStyle": "octo"
+        }
+    }
+}

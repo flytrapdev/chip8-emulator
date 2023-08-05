@@ -88,7 +88,6 @@ int main(int argc, char** argv)
     };
 
     //Emulation properties
-    int cycles = CYCLES_DEFAULT;  // CHIP-8 cycles per frame
     uint8_t keySet = KB_DEFAULT;  // 0-QWERTY 1-AZERTY
     bool paused = false;          // Emulation paused
     int machine = MACHINE_DEFAULT;// 0: auto 1: chip8 2:schip 3:xochip
@@ -131,7 +130,7 @@ int main(int argc, char** argv)
                 return 1;
             }
             else {
-                cycles = newCycles;
+                chip8->tickRate = newCycles;
             }
         }
 
@@ -298,7 +297,7 @@ int main(int argc, char** argv)
 
     //Window title
     char cyclesBuff[256];
-    snprintf(cyclesBuff, 256, "%i", cycles);
+    snprintf(cyclesBuff, 256, "%i", chip8->tickRate);
 
     string title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
 
@@ -373,19 +372,19 @@ int main(int argc, char** argv)
                         }
 
                         case SDLK_F5: {
-                            if(cycles > CYCLES_STEP)
-                                cycles -= CYCLES_STEP;
+                            if(chip8->tickRate > CYCLES_STEP)
+                                chip8->tickRate -= CYCLES_STEP;
 
-                            snprintf(cyclesBuff, 256, "%i", cycles);
+                            snprintf(cyclesBuff, 256, "%i", chip8->tickRate);
                             title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
                             SDL_SetWindowTitle(window, title.c_str());
                             break;
                         }
 
                         case SDLK_F6: {
-                            cycles += CYCLES_STEP;
+                            chip8->tickRate += CYCLES_STEP;
 
-                            snprintf(cyclesBuff, 256, "%i", cycles);
+                            snprintf(cyclesBuff, 256, "%i", chip8->tickRate);
                             title = "CHIP-8 Interpreter - " + (string)cyclesBuff + " instructions per frame";
                             SDL_SetWindowTitle(window, title.c_str());
                             break;
@@ -438,7 +437,7 @@ int main(int argc, char** argv)
         //Emulate cycles
         if(!paused && !chip8->stopped){
 
-            for(int i = 0 ; i < cycles ; i++)
+            for(int i = 0 ; i < chip8->tickRate ; i++)
                 chip8 -> emulateInstruction();
 
         }

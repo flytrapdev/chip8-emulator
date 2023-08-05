@@ -43,3 +43,7 @@ ch8emu
 *.txt
 *.png
 *.pdf
+
+# TEMP
+test/*
+c8/*

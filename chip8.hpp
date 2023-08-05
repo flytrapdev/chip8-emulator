@@ -95,6 +95,9 @@ public:
     bool hiresClearQuirk;   //Clear screen on resolution change (SCHIP and XOCHIP only)
     bool wrapQuirk;         //Sprites wrap around screen boundariess
 
+    //Game information
+    uint32_t tickRate = 100;
+
     Chip8();
     void initialize();
     void unknownOpcode(uint16_t);

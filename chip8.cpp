@@ -23,6 +23,7 @@ SOFTWARE.
 */
 
 #include "chip8.hpp"
+#include "nlohmann/json.hpp"
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -36,6 +37,12 @@ SOFTWARE.
 #include <cstdlib>
 #include <unistd.h>
 #include <zlib.h>
+
+using json = nlohmann::json;
+
+bool toBool(json json) {
+    return json.is_boolean() ? json.get<bool>() : ! (json.get<int>() == 0);
+}
 
 Chip8::Chip8() {
     //ROM loaded
@@ -128,6 +135,155 @@ void Chip8::unknownOpcode(uint16_t opcode) {
     std::cout << "Unknown opcode 0x" << std::hex << std::setfill('0') << std::setw(4) << opcode << std::endl;
 };
 
+std::string getColorFromName(std::string c) {
+    std::map <std::string, std::string> cssColors = {
+        {"lightsalmon", 	"FFA07A"},
+        {"salmon", 	"FA8072"},
+        {"darksalmon", 	"E9967A"},
+        {"lightcoral", 	"F08080"},
+        {"indianred", 	"CD5C5C"},
+        {"crimson", 	"DC143C"},
+        {"firebrick", 	"B22222"},
+        {"red", 	"FF0000"},
+        {"darkred", 	"8B0000"},
+        {"coral", 	"FF7F50"},
+        {"tomato", 	"FF6347"},
+        {"orangered", 	"FF4500"},
+        {"gold", 	"FFD700"},
+        {"orange", 	"FFA500"},
+        {"darkorange", 	"FF8C00"},
+        {"lightyellow", 	"FFFFE0"},
+        {"lemonchiffon", 	"FFFACD"},
+        {"lightgoldenrodyellow", 	"FAFAD2"},
+        {"papayawhip", 	"FFEFD5"},
+        {"moccasin", 	"FFE4B5"},
+        {"peachpuff", 	"FFDAB9"},
+        {"palegoldenrod", 	"EEE8AA"},
+        {"khaki", 	"F0E68C"},
+        {"darkkhaki", 	"BDB76B"},
+        {"yellow", 	"FFFF00"},
+        {"lawngreen", 	"7CFC00"},
+        {"chartreuse", 	"7FFF00"},
+        {"limegreen", 	"32CD32"},
+        {"lime", 	"00FF00"},
+        {"forestgreen", 	"228B22"},
+        {"green", 	"008000"},
+        {"darkgreen", 	"006400"},
+        {"greenyellow", 	"ADFF2F"},
+        {"yellowgreen", 	"9ACD32"},
+        {"springgreen", 	"00FF7F"},
+        {"mediumspringgreen", 	"00FA9A"},
+        {"lightgreen", 	"90EE90"},
+        {"palegreen", 	"98FB98"},
+        {"darkseagreen", 	"8FBC8F"},
+        {"mediumseagreen", 	"3CB371"},
+        {"seagreen", 	"2E8B57"},
+        {"olive", 	"808000"},
+        {"darkolivegreen", 	"556B2F"},
+        {"olivedrab", 	"6B8E23"},
+        {"lightcyan", 	"E0FFFF"},
+        {"cyan", 	"00FFFF"},
+        {"aqua", 	"00FFFF"},
+        {"aquamarine", 	"7FFFD4"},
+        {"mediumaquamarine", 	"66CDAA"},
+        {"paleturquoise", 	"AFEEEE"},
+        {"turquoise", 	"40E0D0"},
+        {"mediumturquoise", 	"48D1CC"},
+        {"darkturquoise", 	"00CED1"},
+        {"lightseagreen", 	"20B2AA"},
+        {"cadetblue", 	"5F9EA0"},
+        {"darkcyan", 	"008B8B"},
+        {"teal", 	"008080"},
+        {"powderblue", 	"B0E0E6"},
+        {"lightblue", 	"ADD8E6"},
+        {"lightskyblue", 	"87CEFA"},
+        {"skyblue", 	"87CEEB"},
+        {"deepskyblue", 	"00BFFF"},
+        {"lightsteelblue", 	"B0C4DE"},
+        {"dodgerblue", 	"1E90FF"},
+        {"cornflowerblue", 	"6495ED"},
+        {"steelblue", 	"4682B4"},
+        {"royalblue", 	"4169E1"},
+        {"blue", 	"0000FF"},
+        {"mediumblue", 	"0000CD"},
+        {"darkblue", 	"00008B"},
+        {"navy", 	"000080"},
+        {"midnightblue", 	"191970"},
+        {"mediumslateblue", 	"7B68EE"},
+        {"slateblue", 	"6A5ACD"},
+        {"darkslateblue", 	"483D8B"},
+        {"lavender", 	"E6E6FA"},
+        {"thistle", 	"D8BFD8"},
+        {"plum", 	"DDA0DD"},
+        {"violet", 	"EE82EE"},
+        {"orchid", 	"DA70D6"},
+        {"fuchsia", 	"FF00FF"},
+        {"magenta", 	"FF00FF"},
+        {"mediumorchid", 	"BA55D3"},
+        {"mediumpurple", 	"9370DB"},
+        {"blueviolet", 	"8A2BE2"},
+        {"darkviolet", 	"9400D3"},
+        {"darkorchid", 	"9932CC"},
+        {"darkmagenta", 	"8B008B"},
+        {"purple", 	"800080"},
+        {"indigo", 	"4B0082"},
+        {"pink", 	"FFC0CB"},
+        {"lightpink", 	"FFB6C1"},
+        {"hotpink", 	"FF69B4"},
+        {"deeppink", 	"FF1493"},
+        {"palevioletred", 	"DB7093"},
+        {"mediumvioletred", 	"C71585"},
+        {"white", 	"FFFFFF"},
+        {"snow", 	"FFFAFA"},
+        {"honeydew", 	"F0FFF0"},
+        {"mintcream", 	"F5FFFA"},
+        {"azure", 	"F0FFFF"},
+        {"aliceblue", 	"F0F8FF"},
+        {"ghostwhite", 	"F8F8FF"},
+        {"whitesmoke", 	"F5F5F5"},
+        {"seashell", 	"FFF5EE"},
+        {"beige", 	"F5F5DC"},
+        {"oldlace", 	"FDF5E6"},
+        {"floralwhite", 	"FFFAF0"},
+        {"ivory", 	"FFFFF0"},
+        {"antiquewhite", 	"FAEBD7"},
+        {"linen", 	"FAF0E6"},
+        {"lavenderblush", 	"FFF0F5"},
+        {"mistyrose", 	"FFE4E1"},
+        {"gainsboro", 	"DCDCDC"},
+        {"lightgray", 	"D3D3D3"},
+        {"silver", 	"C0C0C0"},
+        {"darkgray", 	"A9A9A9"},
+        {"gray", 	"808080"},
+        {"dimgray", 	"696969"},
+        {"lightslategray", 	"778899"},
+        {"slategray", 	"708090"},
+        {"darkslategray", 	"2F4F4F"},
+        {"black", 	"000000"},
+        {"cornsilk", 	"FFF8DC"},
+        {"blanchedalmond", 	"FFEBCD"},
+        {"bisque", 	"FFE4C4"},
+        {"navajowhite", 	"FFDEAD"},
+        {"wheat", 	"F5DEB3"},
+        {"burlywood", 	"DEB887"},
+        {"tan", 	"D2B48C"},
+        {"rosybrown", 	"BC8F8F"},
+        {"sandybrown", 	"F4A460"},
+        {"goldenrod", 	"DAA520"},
+        {"peru", 	"CD853F"},
+        {"chocolate", 	"D2691E"},
+        {"saddlebrown", 	"8B4513"},
+        {"sienna", 	"A0522D"},
+        {"brown", 	"A52A2A"},
+        {"maroon", 	"800000"}
+    };
+
+    if(cssColors.count(c) == 0)
+        return c;
+    
+    return cssColors[c];
+}
+
 //Load program
 uint8_t Chip8::loadROM(std::string filename) {
 
@@ -169,7 +325,85 @@ uint8_t Chip8::loadROM(std::string filename) {
     loaded = true;
 
     //CRC32
-    std::cout << std::hex << "CRC32 " << crc32(0, (Bytef *) memory + 0x200, pos) << std::endl;
+    uLong hash = crc32(0, (Bytef *) memory + 0x200, pos);
+    std::cout << std::hex << "CRC32 : " << hash << std::endl;
+
+    //Identify game in database
+    std::ifstream databaseFile("programs.json");
+    json gamesData = json::parse(databaseFile);
+
+    std::stringstream ss;
+    ss << std::hex << hash;
+    std::string hashStr = ss.str();
+    ss.clear(); ss.str("");
+
+    if(gamesData.contains(hashStr)) {
+        json game = gamesData[hashStr];
+
+        // Game found
+        std::cout << "Game found in database : " << game.value("title", "Untitled") << std::endl;
+
+        // Tick rate
+        if(game["options"]["tickrate"].is_number()) {
+            tickRate = game["options"]["tickrate"];
+        }
+        else if(game["options"]["tickrate"].is_string()) {
+            std::string jsonTickRate = game["options"]["tickrate"];
+            std::replace(jsonTickRate.begin(), jsonTickRate.end(), '"', ' ');
+            ss << std::dec << jsonTickRate;
+            ss >> tickRate;
+            ss.clear(); ss.str("");
+        }
+        //json jsonTickRate = game["options"]["tickrate"].get<std::string>();
+        //jsonTickRate.get_to(tickRate);
+        std::cout << "Tick rate : " << std::dec << tickRate << std::endl;
+
+        // Color palette
+        /*
+        fillColor = game["options"]["fillColor"].get<int>();
+        fillColor2 = game["options"]["fillColor2"].get<int>();
+        blendColor = game["options"]["blendColor"].get<int>();
+        backColor = game["options"]["backgroundColor"].get<int>();
+        */
+        uint32_t fillColor, fillColor2, backColor, blendColor;
+
+        ss << std::hex << getColorFromName(game["options"]["fillColor"].get<std::string>());
+        ss >> fillColor;
+        ss.clear(); ss.str("");
+
+        ss << std::hex << getColorFromName(game["options"]["backgroundColor"].get<std::string>());
+        ss >> backColor;
+        ss.clear(); ss.str("");
+
+        if(game["platform"] == "xochip") {
+            ss << std::hex << getColorFromName(game["options"]["fillColor2"].get<std::string>());
+            ss >> fillColor2;
+            ss.clear(); ss.str("");
+
+            ss << std::hex << getColorFromName(game["options"]["blendColor"].get<std::string>());
+            ss >> blendColor;
+            ss.clear(); ss.str("");
+        }
+
+        for(uint8_t i = 0 ; i < 3 ; i++) {
+            palette[0][i] = (backColor >> ((2-i)*8)) & 0xff;
+            palette[1][i] = (fillColor >> ((2-i)*8)) & 0xff;
+
+            if(game["platform"] == "xochip") {
+                palette[2][i] = (fillColor2 >> ((2-i)*8)) & 0xff;
+                palette[3][i] = (blendColor >> ((2-i)*8)) & 0xff;
+            }
+        }
+
+        // Quirks
+        shiftQuirk = toBool(game["options"].value("shiftQuirks", 0));
+        loadStoreQuirk = toBool(game["options"].value("loadStoreQuirks", 0));
+        hiresClearQuirk = (game["platform"] == "xochip");
+        //wrapQuirk = toBool(game["options"].value("clipQuirks", 0));
+    }
+    else {
+        std::cout << "Game not found in database" << std::endl;
+    }
 
     return 0;
 
