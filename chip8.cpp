@@ -907,7 +907,7 @@ void Chip8::emulateInstruction() {
         }
 
         case 0xC000: {
-            //0xCNNN
+            //0xCXNN
             //Set VX = Random (0 -> 255) AND NN
             v[(opcode & 0x0F00) >> 8] = opcode & (rand() & 0xFF);
             break;
